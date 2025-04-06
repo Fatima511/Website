@@ -1,0 +1,19 @@
+        body {
+            background-color: #ececdb;
+            direction:"rtl"
+        }
+        .navbar {
+            background-color:   #efedd8 !important;
+        }
+        .navbar-brand img {
+            height: 100%;
+            width: 80px;
+        }
+        .nav-link
+        {
+            color:#21524e;
+        }
+        #navbarNav
+        {
+        }
+

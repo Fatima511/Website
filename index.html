@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جمعية عطب الخيرية</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        body {
+            background-color: #ececdb;
+        }
+        .navbar {
+            background-color: #efedd8 !important;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            font-family: IBMPlexSansArabic-SemiBold;
+            font-weight: 600 !important;
+        }
+        .navbar-brand img {
+            height: 80px;
+            width: 80px;
+            transition: transform 0.3s ease;
+        }
+        .navbar-brand:hover img {
+            transform: scale(1.1) rotate(-5deg);
+        }
+        .nav-link {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin: 0 0.5rem;
+            color: #333;
+            transition: all 0.4s ease;
+            position: relative;
+            padding: 8px 15px;
+            border-radius: 20px;
+
+            font-weight: 600 !important;
+        }
+        .nav-link:hover {
+            color: #5a7247 !important;
+            transform: translateY(-3px);
+            background-color: rgba(184, 197, 174, 0.3);
+        }
+        .nav-link:active {
+            transform: translateY(1px);
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            right: 0;
+            background-color: #5a7247;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+            right: auto;
+            left: 0;
+        }
+        .nav-link.active {
+            background-color: #b8c5ae;
+            color: white !important;
+            font-weight: 700;
+        }
+        .navbar-toggler {
+            margin-left: 0;
+            border: none;
+            padding: 10px;
+        }
+        .navbar-toggler:focus {
+            box-shadow: 0 0 0 3px rgba(184, 197, 174, 0.5);
+        }
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+.hero-section {
+            padding: 80px 0;
+            background-color: #f8f8f2;
+        }
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .hero-text {
+            flex: 1;
+            padding-left: 40px;
+        }
+        .hero-text h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #5a7247;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+        .hero-text p {
+            font-size: 1.2rem;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+        .hero-image {
+            flex: 1;
+            text-align: left;
+        }
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.5s ease;
+        }
+        .hero-image img:hover {
+            transform: scale(1.03);
+        }
+        .btn-primary {
+            background-color: #b8c5ae;
+            border-color: #a3b397;
+            padding: 10px 25px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #9aaa8e;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* تأثيرات responsive */
+        @media (max-width: 992px) {
+            .hero-content {
+                flex-direction: column-reverse;
+            }
+            .hero-text {
+                padding-left: 0;
+                margin-top: 40px;
+                text-align: center;
+            }
+            .hero-image {
+                text-align: center;
+            }
+        }
+                footer {
+            background: linear-gradient(135deg, #5a7247 0%, #3a4d2e 100%);
+            color: #fff;
+            padding: 60px 0 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer-wave {
+            position: absolute;
+            top: -50px;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="%23efedd8" opacity=".25"/><path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" fill="%23efedd8" opacity=".5"/><path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="%23efedd8"/></svg>');
+            background-size: cover;
+            animation: waveAnimation 8s linear infinite;
+        }
+
+        @keyframes waveAnimation {
+            0% { background-position-x: 0; }
+            100% { background-position-x: 1200px; }
+        }
+
+        .footer-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-logo img {
+            height: 80px;
+            width: auto;
+            margin-bottom: 20px;
+            transition: transform 0.5s ease;
+        }
+
+        .footer-logo:hover img {
+            transform: rotate(-5deg) scale(1.1);
+        }
+
+        .footer-heading {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .footer-heading::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            background: #b8c5ae;
+            bottom: -10px;
+            right: 0;
+            transition: width 0.3s ease;
+        }
+
+        .footer-heading:hover::after {
+            width: 100%;
+        }
+
+        .footer-links a {
+            color: #e0e0e0;
+            display: block;
+            margin-bottom: 12px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: #fff;
+            transform: translateX(-10px);
+            text-shadow: 0 0 5px rgba(255,255,255,0.3);
+        }
+
+        .footer-links a i {
+            margin-left: 8px;
+            font-size: 0.9rem;
+        }
+
+        .contact-info {
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .contact-info i {
+            margin-left: 10px;
+            font-size: 1.2rem;
+            color: #b8c5ae;
+            margin-top: 3px;
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            color: #fff;
+            border-radius: 50%;
+            margin-left: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            background: #b8c5ae;
+            transform: translateY(-5px) rotate(10deg);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .newsletter-form {
+            display: flex;
+            margin-top: 20px;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 30px 0 0 30px;
+            background: rgba(255,255,255,0.2);
+            color: #fff;
+        }
+
+        .newsletter-form input::placeholder {
+            color: #e0e0e0;
+        }
+
+        .newsletter-form button {
+            background: #b8c5ae;
+            color: #333;
+            border: none;
+            padding: 0 20px;
+            border-radius: 0 30px 30px 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .newsletter-form button:hover {
+            background: #9aaa8e;
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .back-to-top {
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 50px;
+            background: #b8c5ae;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+            font-size: 1.2rem;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            animation: floatAnimation 3s ease-in-out infinite;
+        }
+
+        .back-to-top:hover {
+            background: #9aaa8e;
+            transform: translateX(-50%) translateY(-5px);
+        }
+
+        @keyframes floatAnimation {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(-10px); }
+        }
+
+        /* تأثيرات الحركة */
+        .animate-footer-item {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.5s ease;
+        }
+
+        .animate-footer-item.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .btn-custom {
+            border: none;
+            padding: 5px 15px;
+            transition: transform 0.2s;
+             background: linear-gradient(135deg, #5a7247 0%, #3a4d2e 100%);}
+
+        .btn-custom:hover {
+            background-color: rgba(184, 197, 174, 0.3);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="logo.jpg" alt="شعار الجمعية" class="animate__animated animate__fadeIn">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="تبديل التنقل">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav animate__animated animate__fadeInDown">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">عن الجمعية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">المشاريع</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">تواصل معنا</a>
+                    </li>
+                </ul>
+                <div class="btn-group" role="group" aria-label="Language Translation">
+                  <a href="index_en.html" class="btn btn-custom btn-success">
+                      <i class="fas fa-language"></i> EN
+                  </a>
+                </div>
+            </div>
+
+        </div>
+
+        </div>
+    </nav>
+     <section class="hero-section">
+        <div class="container">
+            <div class="hero-content animate__animated animate__fadeInUp">
+                <div class="hero-text">
+                    <h1>جمعية عطب الخيرية <br>نحو مجتمع متكامل ومستدام</h1>
+                    <p>
+                        تأسست جمعيتنا عام 2005 بهدف خدمة المجتمع المحلي وتنمية المنطقة.<br>
+                        نعمل على تحقيق التنمية المستدامة من خلال برامج متكاملة تشمل التعليم، الصحة،<br>
+                        وتمكين الشباب. نسعى لبناء مستقبل أفضل للأجيال القادمة.
+                    </p>
+                    <a href="#" class="btn btn-primary">تعرف على المزيد</a>
+                </div>
+                <div class="hero-image">
+                    <img src="port01.jpg" alt="صورة نخلة" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- الفوتر -->
+    <footer>
+        <div class="footer-wave"></div>
+        <div class="container footer-content">
+            <div class="row">
+                <!-- العمود الأول: الشعار ووصف الجمعية -->
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <div class="footer-logo animate-footer-item" style="transition-delay: 0.1s;">
+                        <img src="logo.jpg" alt="شعار جمعية عطب الخيرية" class="img-fluid">
+                    </div>
+                    <p class="animate-footer-item" style="transition-delay: 0.2s;">
+                        جمعية عطب الخيرية تهدف إلى خدمة المجتمع وتنمية المنطقة منذ عام 2005.
+                        نعمل على تحقيق التنمية المستدامة من خلال برامج متكاملة تشمل التعليم،
+                        الصحة.
+                    </p>
+                    <div class="social-icons mt-4 animate-footer-item" style="transition-delay: 0.3s;">
+                        <a href="#" class="animate__animated animate__pulse"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="animate__animated animate__pulse"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="animate__animated animate__pulse"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="animate__animated animate__pulse"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- العمود الثاني: روابط سريعة -->
+                <div class="col-lg-2 col-md-6 mb-5 mb-md-0">
+                    <h3 class="footer-heading animate-footer-item" style="transition-delay: 0.2s;">روابط سريعة</h3>
+                    <div class="footer-links">
+                        <a href="#" class="animate-footer-item" style="transition-delay: 0.3s;">الرئيسية <i class="fas fa-chevron-left"></i></a>
+                        <a href="#" class="animate-footer-item" style="transition-delay: 0.4s;">عن الجمعية <i class="fas fa-chevron-left"></i></a>
+                        <a href="#" class="animate-footer-item" style="transition-delay: 0.5s;">المشاريع <i class="fas fa-chevron-left"></i></a>
+                        <a href="#" class="animate-footer-item" style="transition-delay: 0.6s;">إنجازاتنا <i class="fas fa-chevron-left"></i></a>
+                        <a href="#" class="animate-footer-item" style="transition-delay: 0.7s;">تواصل معنا <i class="fas fa-chevron-left"></i></a>
+                    </div>
+                </div>
+
+                <!-- العمود الثالث: معلومات التواصل -->
+                <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
+                    <h3 class="footer-heading animate-footer-item" style="transition-delay: 0.3s;">تواصل معنا</h3>
+                    <div class="contact-info">
+                        <p class="animate-footer-item" style="transition-delay: 0.4s;">
+                            <i class="fas fa-map-marker-alt"></i>
+                            السودان - الولاية الشمالية - عبري
+                        </p>
+                        <p class="animate-footer-item" style="transition-delay: 0.5s;">
+                            <i class="fas fa-phone-alt"></i>
+                            +966 12 345 6789
+                        </p>
+                        <p class="animate-footer-item" style="transition-delay: 0.6s;">
+                            <i class="fas fa-envelope"></i>
+                            info@atab-charity.org
+                        </p>
+                    </div>
+                </div>
+
+
+
+            <!-- حقوق النشر -->
+            <div class="copyright animate-footer-item" style="transition-delay: 0.7s;">
+                <p>جميع الحقوق محفوظة &copy; 2023 جمعية عطب الخيرية</p>
+            </div>
+
+            <!-- زر العودة للأعلى -->
+            <a href="#" class="back-to-top animate__animated animate__fadeInUp">
+                <i class="fas fa-arrow-up"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // ظهور العناصر بالتتابع عند التمرير
+        function animateOnScroll() {
+            const items = document.querySelectorAll('.animate-footer-item');
+            items.forEach(item => {
+                const itemPosition = item.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.2;
+
+                if(itemPosition < screenPosition) {
+                    item.classList.add('show');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+
+        // تأثيرات حركية لأيقونات التواصل الاجتماعي
+        const socialIcons = document.querySelectorAll('.social-icons a');
+        socialIcons.forEach(icon => {
+            icon.addEventListener('mouseenter', () => {
+                icon.classList.add('animate__rubberBand');
+                setTimeout(() => {
+                    icon.classList.remove('animate__rubberBand');
+                }, 1000);
+            });
+        });
+
+        // زر العودة للأعلى
+        const backToTop = document.querySelector('.back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.style.opacity = '1';
+                backToTop.style.visibility = 'visible';
+            } else {
+                backToTop.style.opacity = '0';
+                backToTop.style.visibility = 'hidden';
+            }
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script>
+        // إضافة تأثيرات حركية عند التمرير
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('mouseenter', () => {
+                link.classList.add('animate__pulse');
+                setTimeout(() => {
+                    link.classList.remove('animate__pulse');
+                }, 1000);
+            });
+        });
+
+        // تغيير لون الروابط عند التمرير
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.15)';
+            } else {
+                navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+            }
+        });
+    </script>
+</body>
+</html>
