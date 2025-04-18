@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قرية عطب - جمعية عطب الخيرية</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #5a7247;
+            --secondary-color: #b8c5ae;
+            --dark-color: #333;
+            --light-color: #f8f8f2;
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #ececdb;
+            color: #333;
+        }
+
+        /* هيدر الصفحة */
+        .page-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('village-header.jpg') center/cover;
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+            position: relative;
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+        }
+
+        .breadcrumb {
+            background-color: rgba(255,255,255,0.2);
+            padding: 10px 20px;
+            border-radius: 30px;
+            display: inline-block;
+        }
+
+        .breadcrumb-item a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .breadcrumb-item a:hover {
+            color: white;
+        }
+
+        .breadcrumb-item.active {
+            color: white;
+        }
+
+        /* قسم الكاروسيل */
+        .village-carousel {
+            padding: 60px 0;
+            background-color: var(--light-color);
+        }
+
+        .carousel-item img {
+            height: 500px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .carousel-caption {
+            background: rgba(0,0,0,0.6);
+            border-radius: 10px;
+            padding: 20px;
+            right: 5%;
+            left: 5%;
+            bottom: 20px;
+        }
+
+        .carousel-control-prev, .carousel-control-next {
+            width: 5%;
+        }
+
+        /* قسم نبذة عن القرية */
+        .about-village {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            background: var(--secondary-color);
+            bottom: -10px;
+            right: 0;
+        }
+
+        .village-features {
+            margin-top: 40px;
+        }
+
+        .feature-box {
+            background: var(--light-color);
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            transition: all 0.3s;
+            height: 100%;
+            border: 1px solid #e0e0e0;
+        }
+
+        .feature-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        /* قسم الخريطة */
+        .village-map {
+            padding: 80px 0;
+            background-color: var(--light-color);
+        }
+
+        .map-container {
+            height: 500px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 1px solid #ddd;
+        }
+
+        .map-description {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        /* تأثيرات الحركة */
+        .animate-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .animate-in.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* التكيف مع الشاشات الصغيرة */
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .carousel-item img {
+                height: 300px;
+            }
+
+            .map-container {
+                height: 300px;
+            }
+        }
+.photo-grid-section {
+            padding: 60px 0;
+            background-color: #f8f8f2;
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .photo-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            aspect-ratio: 1/1;
+            background: linear-gradient(135deg, #b8c5ae, #5a7247);
+        }
+
+        .photo-item:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            z-index: 2;
+        }
+
+        .photo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.4s ease;
+            opacity: 0.9;
+        }
+
+        .photo-item:hover img {
+            opacity: 1;
+        }
+
+        .photo-caption {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            padding: 20px;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: white;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+            text-align: right;
+        }
+
+        .photo-item:hover .photo-caption {
+            transform: translateY(0);
+        }
+
+        .photo-caption h3 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .photo-caption p {
+            font-size: 0.9rem;
+            margin-bottom: 0;
+            opacity: 0;
+            transition: opacity 0.3s ease 0.1s;
+        }
+
+        .photo-item:hover .photo-caption p {
+            opacity: 0.9;
+        }
+
+        .grid-title {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .grid-title h2 {
+            display: inline-block;
+            font-size: 2.2rem;
+            color: #5a7247;
+            padding-bottom: 15px;
+        }
+
+        .grid-title h2::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: #b8c5ae;
+            bottom: 0;
+            right: 50%;
+            transform: translateX(50%);
+            border-radius: 2px;
+        }
+
+        /* تأثيرات متدرجة للألوان */
+        .photo-item:nth-child(1) { background: linear-gradient(135deg, #b8c5ae, #5a7247); }
+        .photo-item:nth-child(2) { background: linear-gradient(135deg, #d4b483, #a67c52); }
+        .photo-item:nth-child(3) { background: linear-gradient(135deg, #a8caba, #5a8c7e); }
+        .photo-item:nth-child(4) { background: linear-gradient(135deg, #d4a59a, #a05c4c); }
+        .photo-item:nth-child(5) { background: linear-gradient(135deg, #c9b1bd, #7a5c6b); }
+        .photo-item:nth-child(6) { background: linear-gradient(135deg, #b8d4e3, #5a8cac); }
+
+        /* تأثيرات للشبكة على الشاشات الصغيرة */
+        @media (max-width: 768px) {
+            .photo-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                gap: 15px;
+            }
+
+            .photo-caption {
+                padding: 12px;
+                transform: translateY(0);
+                background: rgba(0,0,0,0.5);
+            }
+
+            .photo-caption p {
+                opacity: 0.9;
+                font-size: 0.8rem;
+            }
+
+            .photo-item:hover {
+                transform: none;
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            }
+        }
+    </style>
+</head>
+<body>
+     <nav class="navbar navbar-expand-lg shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="logo.jpg" alt="شعار الجمعية" class="animate__animated animate__fadeIn">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="تبديل التنقل">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav animate__animated animate__fadeInDown">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about-org.html">عن الجمعية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about_village.html">عن القرية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">المشاريع</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">تواصل معنا</a>
+                    </li>
+                </ul>
+                <div class="btn-group" role="group" aria-label="Language Translation">
+                  <a href="index_en.html" class="btn btn-custom btn-success">
+                      <i class="fas fa-language"></i> EN
+                  </a>
+                </div>
+            </div>
+
+        </div>
+
+        </div>
+    </nav>>
+
+        <section class="photo-grid-section">
+        <div class="container">
+            <div class="grid-title animate-in">
+                <h2>معرض قرية عطب</h2>
+            </div>
+
+            <div class="photo-grid">
+                <div class="photo-item animate-in" style="transition-delay: 0.1s;">
+                    <img src="village1.jpg" alt="منظر عام للقرية">
+                    <div class="photo-caption">
+                        <h3>الثروة الحيوانية </h3>
+                        <p>تُشكل قطعان الأبقار والمواشي جزءًا أساسيًا من المشهد الريفي، حيث تختلط أصواتها مع حفيف الأشجار وهمس الرياح</p>
+                    </div>
+                </div>
+
+                <div class="photo-item animate-in" style="transition-delay: 0.2s;">
+                    <img src="village2.jpg" alt="المسجد القديم">
+                    <div class="photo-caption">
+                        <h3>سنابل القمح</h3>
+                        <p>تظهر مزارع القمح كسجّاد ذهبي يكسو الأرض، بينما تقف أشجار النخيل سامقةً خلفها كحرّاسٍ للتاريخ </p>
+                    </div>
+                </div>
+
+
+                <div class="photo-item animate-in" style="transition-delay: 0.4s;">
+                    <img src="village4.jpg" alt="الأطفال">
+                    <div class="photo-caption">
+                        <h3>مسجد القرية الكبير</h3>
+                        <p>مسجد القرية الكبير الذي  يمثل مركزًا روحانيًا واجتماعيًا بارزًا، حيث يجسد تراثًا دينيًا عريقًا ويلعب دورًا محوريًا في حياة الأهالي. </p>
+                    </div>
+                </div>
+
+                <div class="photo-item animate-in" style="transition-delay: 0.5s;">
+                    <img src="village5.jpg" alt="الحرف اليدوية">
+                    <div class="photo-caption">
+    y                    <h3>نيلنا</h3>
+                        <p>ينساب النيل كشريان فضيّ محاطًا بأشجار النخيل السامقة، كأنهما خُلقا ليكمّل أحدهما الآخر. هذا المشهد ليس مجرد منظر طبيعي، بل هو للحياة في الصحراء.</p>
+
+
+
+    <!-- قسم الخريطة -->
+    <section class="village-map">
+        <div class="container">
+            <h2 class="section-title text-center animate-in">موقع القرية</h2>
+
+
+            <div class="animate-in" style="transition-delay: 0.3s;">
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3639.234567890123!2d31.2345678!3d19.1234567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDA3JzI0LjQiTiAzMcKwMTQnMDcuNiJF!5e0!3m2!1sen!2sus!4v1623456789012!5m2!1sen!2sus"
+                            width="100%"
+                            height="100%"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy">
+                    </iframe>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-wave"></div>
+        <div class="container footer-content">
+            <div class="row">
+                <!-- العمود الأول: الشعار ووصف الجمعية -->
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <div class="footer-logo animate-footer-item" style="transition-delay: 0.1s;">
+                        <img src="logo.jpg" alt="شعار جمعية عطب الخيرية" class="img-fluid">
+                    </div>
+                    <p class="animate-footer-item" style="transition-delay: 0.2s;">
+                        جمعية عطب الخيرية تهدف إلى خدمة المجتمع وتنمية المنطقة منذ يناير 2025.
+                        نعمل على تحقيق التنمية المستدامة من خلال برامج متكاملة تشمل التعليم،
+                        الصحة.
+                    </p>
+                    <div class="social-icons mt-4 animate-footer-item" style="transition-delay: 0.3s;">
+                        <a href="#" class="animate__animated animate__pulse"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="animate__animated animate__pulse"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="animate__animated animate__pulse"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="animate__animated animate__pulse"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- العمود الثاني: روابط سريعة -->
+                <div class="col-lg-2 col-md-6 mb-5 mb-md-0">
+                    <h3 class="footer-heading animate-footer-item" style="transition-delay: 0.2s;">روابط سريعة</h3>
+                    <div class="footer-links">
+                        <a href="index.html" class="animate-footer-item" style="transition-delay: 0.3s;">الرئيسية <i class="fas fa-chevron-left"></i></a>
+                        <a href="about-org.html" class="animate-footer-item" style="transition-delay: 0.4s;">عن الجمعية <i class="fas fa-chevron-left"></i></a>
+                        <a href="#" class="animate-footer-item" style="transition-delay: 0.5s;">المشاريع <i class="fas fa-chevron-left"></i></a>
+                        <a href="about_village.html" class="animate-footer-item" style="transition-delay: 0.6s;">عن القرية <i class="fas fa-chevron-left"></i></a>
+                        <a href="#" class="animate-footer-item" style="transition-delay: 0.7s;">تواصل معنا <i class="fas fa-chevron-left"></i></a>
+                    </div>
+                </div>
+
+                <!-- العمود الثالث: معلومات التواصل -->
+                <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
+                    <h3 class="footer-heading animate-footer-item" style="transition-delay: 0.3s;">تواصل معنا</h3>
+                    <div class="contact-info">
+                        <p class="animate-footer-item" style="transition-delay: 0.4s;">
+                            <i class="fas fa-map-marker-alt"></i>
+                            السودان - الولاية الشمالية - عبري
+                        </p>
+                        <p class="animate-footer-item" style="transition-delay: 0.5s;">
+                            <i class="fas fa-phone-alt"></i>
+                            +966 12 345 6789
+                        </p>
+                        <p class="animate-footer-item" style="transition-delay: 0.6s;">
+                            <i class="fas fa-envelope"></i>
+                            info@atab-charity.org
+                        </p>
+                    </div>
+                </div>
+            <!-- حقوق النشر -->
+            <div class="copyright animate-footer-item" style="transition-delay: 0.7s;">
+                <p>جميع الحقوق محفوظة &copy; 2023 جمعية عطب الخيرية</p>
+            </div>
+
+            <!-- زر العودة للأعلى -->
+            <a href="#" class="back-to-top animate__animated animate__fadeInUp">
+                <i class="fas fa-arrow-up"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // تأثيرات الظهور عند التمرير
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.animate-in');
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.2;
+
+                if(elementPosition < screenPosition) {
+                    element.classList.add('show');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+
+        // إضافة تأثير للروابط
+        document.querySelectorAll('a').forEach(link => {
+            link.addEventListener('mouseenter', () => {
+                link.style.transform = 'translateX(-5px)';
+            });
+            link.addEventListener('mouseleave', () => {
+                link.style.transform = 'translateX(0)';
+            });
+        });
+        document.querySelectorAll('.photo-item').forEach(item => {
+            item.addEventListener('mousemove', (e) => {
+                const x = e.clientX - item.getBoundingClientRect().left;
+                const y = e.clientY - item.getBoundingClientRect().top;
+                const centerX = item.offsetWidth / 2;
+                const centerY = item.offsetHeight / 2;
+
+                const angleX = (y - centerY) / 20;
+                const angleY = (centerX - x) / 20;
+
+                item.style.transform = `rotateX(${angleX}deg) rotateY(${angleY}deg) scale(1.05)`;
+            });
+
+            item.addEventListener('mouseleave', () => {
+                item.style.transform = 'rotateX(0) rotateY(0) scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -78,46 +78,7 @@
         .navbar-toggler-icon {
             background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
         }
-.hero-section {
-            padding: 80px 0;
-            background-color: #f8f8f2;
-        }
-        .hero-content {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .hero-text {
-            flex: 1;
-            padding-left: 40px;
-        }
-        .hero-text h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #5a7247;
-            margin-bottom: 20px;
-            line-height: 1.4;
-        }
-        .hero-text p {
-            font-size: 1.2rem;
-            color: #555;
-            line-height: 1.8;
-            margin-bottom: 30px;
-        }
-        .hero-image {
-            flex: 1;
-            text-align: left;
-        }
-        .hero-image img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transition: transform 0.5s ease;
-        }
-        .hero-image img:hover {
-            transform: scale(1.03);
-        }
+
         .btn-primary {
             background-color: #b8c5ae;
             border-color: #a3b397;
@@ -148,95 +109,10 @@
             }
         }
 
-        .village-section {
-            position: relative;
-            padding: 120px 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url('village2.jpg') no-repeat center center;            background-size: cover;
-            color: white;
-            text-align: center;
-            overflow: hidden;
-        }
 
-        .village-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.4);
-            z-index: 1;
-        }
 
-        .village-content {
-            position: relative;
-            z-index: 2;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
 
-        .village-section h2 {
-            font-size: 2.8rem;
-            margin-bottom: 20px;
-            font-weight: 700;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
 
-        .village-section p {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            margin-bottom: 30px;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-        }
-
-        .village-btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background-color: #b8c5ae;
-            color: #333;
-            font-weight: 600;
-            border-radius: 50px;
-            text-decoration: none;
-            transition: all 0.4s ease;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .village-btn:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-            color: #333;
-        }
-
-        .village-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: 0.5s;
-        }
-
-        .village-btn:hover::before {
-            left: 100%;
-        }
-
-        @media (max-width: 768px) {
-            .village-section {
-                padding: 80px 0;
-            }
-
-            .village-section h2 {
-                font-size: 2.2rem;
-            }
-
-            .village-section p {
-                font-size: 1rem;
-            }
-        }
 
         .about-section {
             padding: 80px 0;
@@ -506,6 +382,315 @@
             background-color: rgba(184, 197, 174, 0.3);
             transform: scale(1.05);
         }
+         .photo-grid-section {
+            padding: 60px 0;
+            background-color: #f8f8f2;
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .photo-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            aspect-ratio: 1/1;
+            background: linear-gradient(135deg, #b8c5ae, #5a7247);
+        }
+
+        .photo-item:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            z-index: 2;
+        }
+
+        .photo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.4s ease;
+            opacity: 0.9;
+        }
+
+        .photo-item:hover img {
+            opacity: 1;
+        }
+
+        .photo-caption {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            padding: 20px;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: white;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+            text-align: right;
+        }
+
+        .photo-item:hover .photo-caption {
+            transform: translateY(0);
+        }
+
+        .photo-caption h3 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .photo-caption p {
+            font-size: 0.9rem;
+            margin-bottom: 0;
+            opacity: 0;
+            transition: opacity 0.3s ease 0.1s;
+        }
+
+        .photo-item:hover .photo-caption p {
+            opacity: 0.9;
+        }
+
+        .grid-title {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .grid-title h2 {
+            display: inline-block;
+            font-size: 2.2rem;
+            color: #5a7247;
+            padding-bottom: 15px;
+        }
+
+        .grid-title h2::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: #b8c5ae;
+            bottom: 0;
+            right: 50%;
+            transform: translateX(50%);
+            border-radius: 2px;
+        }
+
+        /* تأثيرات متدرجة للألوان */
+        .photo-item:nth-child(1) { background: linear-gradient(135deg, #b8c5ae, #5a7247); }
+        .photo-item:nth-child(2) { background: linear-gradient(135deg, #d4b483, #a67c52); }
+        .photo-item:nth-child(3) { background: linear-gradient(135deg, #a8caba, #5a8c7e); }
+        .photo-item:nth-child(4) { background: linear-gradient(135deg, #d4a59a, #a05c4c); }
+        .photo-item:nth-child(5) { background: linear-gradient(135deg, #c9b1bd, #7a5c6b); }
+        .photo-item:nth-child(6) { background: linear-gradient(135deg, #b8d4e3, #5a8cac); }
+
+        /* تأثيرات للشبكة على الشاشات الصغيرة */
+        @media (max-width: 768px) {
+            .photo-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                gap: 15px;
+            }
+
+            .photo-caption {
+                padding: 12px;
+                transform: translateY(0);
+                background: rgba(0,0,0,0.5);
+            }
+
+            .photo-caption p {
+                opacity: 0.9;
+                font-size: 0.8rem;
+            }
+
+            .photo-item:hover {
+                transform: none;
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            }
+        }
+        .about-village {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            background: var(--secondary-color);
+            bottom: -10px;
+            right: 0;
+        }
+        .feature-box {
+            background: var(--light-color);
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            transition: all 0.3s;
+            height: 100%;
+            border: 1px solid #e0e0e0;
+        }
+
+        .feature-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+         /* قسم الخريطة */
+        .village-map {
+            padding: 80px 0;
+            background-color: var(--light-color);
+        }
+
+        .map-container {
+            height: 500px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 1px solid #ddd;
+        }
+
+        .map-description {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .photo-grid-section {
+        padding: 60px 0;
+        background-color: #f8f8f2;
+    }
+
+    .photo-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 40px;
+    }
+
+    .photo-item {
+        position: relative;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        aspect-ratio: 1/1;
+        background: linear-gradient(135deg, #b8c5ae, #5a7247);
+    }
+
+    .photo-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all 0.6s ease;
+        opacity: 0.9;
+        transform: scale(1);
+    }
+
+    .photo-item:hover img {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+
+    .photo-caption {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        padding: 20px;
+        background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+        color: white;
+        transform: translateY(100%);
+        transition: transform 0.4s ease, opacity 0.3s ease;
+        opacity: 0;
+        text-align: right;
+    }
+
+    .photo-item:hover .photo-caption {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    /* أنيميشن للصور عند الظهور */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .photo-item {
+        animation: fadeInUp 0.8s ease forwards;
+        opacity: 0;
+    }
+
+    /* تأخير كل صورة */
+    .photo-item:nth-child(1) { animation-delay: 0.1s; }
+    .photo-item:nth-child(2) { animation-delay: 0.2s; }
+    .photo-item:nth-child(3) { animation-delay: 0.3s; }
+    .photo-item:nth-child(4) { animation-delay: 0.4s; }
+    .photo-item:nth-child(5) { animation-delay: 0.5s; }
+    .photo-item:nth-child(6) { animation-delay: 0.6s; }
+
+    /* تعديلات للشاشات الصغيرة */
+    @media (max-width: 768px) {
+        .photo-grid {
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 15px;
+        }
+
+        .photo-caption {
+            padding: 12px;
+            transform: translateY(100%);
+            opacity: 0;
+            background: rgba(0,0,0,0.7);
+        }
+
+        .photo-item:active .photo-caption,
+        .photo-item:focus .photo-caption {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        /* تحسينات للتفاعل على الأجهزة المحمولة */
+        .photo-item {
+            -webkit-tap-highlight-color: transparent;
+        }
+    }
+
+    /* تأثير اهتزاز خفيف عند النقر */
+    @keyframes gentleShake {
+        0%, 100% { transform: translateX(0); }
+        25% { transform: translateX(-3px); }
+        75% { transform: translateX(3px); }
+    }
+
+    .photo-item:active {
+        animation: gentleShake 0.3s ease;
+    }
     </style>
 </head>
 <body>
@@ -521,13 +706,13 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav animate__animated animate__fadeInDown">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">الرئيسية</a>
+                        <a class="nav-link " href="#">الرئيسية</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="about-org.html">عن الجمعية</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about_village.html">عن القرية</a>
+                        <a class="nav-link active" href="about_village.html">عن القرية</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">المشاريع</a>
@@ -548,42 +733,93 @@
         </div>
     </nav>
 
-       <section class="hero-section">
+      <section class="photo-grid-section">
         <div class="container">
-            <div class="hero-content animate__animated animate__fadeInUp">
-                <div class="hero-text">
-                    <h1>جمعية عطب الخيرية <br>نحو مجتمع متكامل ومستدام</h1>
-                    <p>
-                        تأسست جمعيتنا في يناير 2025 بهدف خدمة المجتمع المحلي وتنمية المنطقة.<br>
-                        نعمل على تحقيق التنمية المستدامة من خلال برامج متكاملة تشمل التعليم، الصحة،<br>
-                        وتمكين الشباب. نسعى لبناء مستقبل أفضل للأجيال القادمة.
-                    </p>
-                    <a href="about-org.html" class="btn btn-primary">تعرف علينا أكثر</a>
+            <div class="grid-title animate-in">
+                <h2>معرض قرية عطب</h2>
+            </div>
+
+            <div class="photo-grid">
+                <div class="photo-item animate-in" style="transition-delay: 0.1s;">
+                    <img src="village1.jpg" alt="منظر عام للقرية">
+                    <div class="photo-caption">
+                        <h3>الثروة الحيوانية </h3>
+                        <p>تُشكل قطعان الأبقار والمواشي جزءًا أساسيًا من المشهد الريفي، حيث تختلط أصواتها مع حفيف الأشجار وهمس الرياح</p>
+                    </div>
                 </div>
-                <div class="hero-image">
-                    <img src="image1.jpg" alt="صورة نخلة" class="img-fluid">
+
+                <div class="photo-item animate-in" style="transition-delay: 0.2s;">
+                    <img src="village2.jpg" alt="المسجد القديم">
+                    <div class="photo-caption">
+                        <h3>سنابل القمح</h3>
+                        <p>تظهر مزارع القمح كسجّاد ذهبي يكسو الأرض، بينما تقف أشجار النخيل سامقةً خلفها كحرّاسٍ للتاريخ </p>
+                    </div>
                 </div>
+
+
+                <div class="photo-item animate-in" style="transition-delay: 0.4s;">
+                    <img src="village4.jpg" alt="الأطفال">
+                    <div class="photo-caption">
+                        <h3>مسجد القرية الكبير</h3>
+                        <p>مسجد القرية الكبير الذي  يمثل مركزًا روحانيًا واجتماعيًا بارزًا، حيث يجسد تراثًا دينيًا عريقًا ويلعب دورًا محوريًا في حياة الأهالي. </p>
+                    </div>
+                </div>
+
+                <div class="photo-item animate-in" style="transition-delay: 0.5s;">
+                    <img src="village5.jpg" alt="الحرف اليدوية">
+                    <div class="photo-caption">
+                        <h3>نيلنا</h3>
+                        <p>ينساب النيل كشريان فضيّ محاطًا بأشجار النخيل السامقة، كأنهما خُلقا ليكمّل أحدهما الآخر. هذا المشهد ليس مجرد منظر طبيعي، بل هو للحياة في الصحراء.</p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <section class="village-section animate__animated animate__fadeIn">
-        <div class="village-overlay"></div>
-        <div class="village-content">
-            <h2>قرية عطب</h2>
-            <p>
-                قرية عطب هي إحدى القرى العريقة في الولاية الشمالية بالسودان.
-                تعاني القرية من بعض التحديات التنموية التي تعمل جمعيتنا على حلها من خلال مشاريع مستدامة
-                تلامس احتياجات السكان وتواكب تطلعاتهم نحو مستقبل أفضل.
-            </p>
-            <a href="about_village.html" class="village-btn animate__animated animate__pulse animate__infinite animate__slower">
-                اكتشف المزيد عن القرية <i class="fas fa-arrow-left ms-2"></i>
-            </a>
+<section class="about-village">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 animate-in">
+                    <h2 class="section-title">نبذة عن قرية عطب</h2>
+                    <p>
+                        تقع قرية عطب في الولاية الشمالية بالسودان، وتعتبر من القرى  العريقة في المنطقة.
+                    </p>
+                    <p>
+                        يعتمد سكان القرية على الزراعة التقليدية وتربية المواشي كمصادر رئيسية للدخل.
+                    </p>
+                    <p>
+                        يبلغ عدد سكان القرية حوالي 3000 نسمة، ويتميز أهلها بالكرم وحسن الضيافة،
+                        كما يحافظون على تقاليدهم وعاداتهم الأصيلة التي توارثوها عن أجدادهم.
+                    </p>
+                </div>
+                <div class="col-lg-6 animate-in" style="transition-delay: 0.2s;">
+                    <img src="village.jpg" alt="قرية عطب" class="img-fluid rounded shadow">
+                </div>
+            </div>
+
+
+</div>
+</section>
+        <section class="village-map">
+        <div class="container">
+            <h2 class="section-title text-center animate-in">موقع القرية</h2>
+
+
+            <div class="animate-in" style="transition-delay: 0.3s;">
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3639.234567890123!2d31.2345678!3d19.1234567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDA3JzI0LjQiTiAzMcKwMTQnMDcuNiJF!5e0!3m2!1sen!2sus!4v1623456789012!5m2!1sen!2sus"
+                            width="100%"
+                            height="100%"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy">
+                    </iframe>
+                </div>
+
+            </div>
         </div>
     </section>
-
-
-
 
     <footer>
         <div class="footer-wave"></div>
@@ -715,5 +951,11 @@
             }
         });
     </script>
+</body>
+</html>
+</title>
+</head>
+<body>
+
 </body>
 </html>
