@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Attab Charity Organization</title>
+    <title>Attab Charity Association</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
@@ -354,6 +354,293 @@
             background-color: rgba(184, 197, 174, 0.3);
             transform: scale(1.05);
         }
+
+        .village-section {
+            position: relative;
+            padding: 120px 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url('village2.jpg') no-repeat center center;            background-size: cover;
+            color: white;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .village-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        .village-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .village-section h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .village-section p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .village-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #b8c5ae;
+            color: #333;
+            font-weight: 600;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .village-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            color: #333;
+        }
+
+        .village-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+        }
+
+        .village-btn:hover::before {
+            left: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .village-section {
+                padding: 80px 0;
+            }
+
+            .village-section h2 {
+                font-size: 2.2rem;
+            }
+
+            .village-section p {
+                font-size: 1rem;
+            }
+        }
+            .projects-section {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+
+        .project-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+            margin-bottom: 30px;
+            height: 100%;
+            background: white;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+
+        .project-img {
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .project-card:hover .project-img {
+            transform: scale(1.05);
+        }
+
+        .project-body {
+            padding: 25px;
+        }
+
+        .project-title {
+            color: #5a7247;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .project-text {
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .progress {
+            height: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .progress-bar {
+            background-color: #5a7247;
+        }
+
+        .donation-info {
+            background-color: #f8f8f2;
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+
+
+        .donate-btn {
+            background-color: #5a7247;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .donate-btn:hover {
+            background-color: #3a4d2e;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            }
+            .bank-details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+  }
+
+  .#donate {
+        padding: 20px 0;
+    }
+
+    .bank-details-container {
+        direction: ltr;
+        font-family: 'Roboto', sans-serif;
+        padding: 0 15px;
+    }
+
+    .bank-details-card {
+        background: linear-gradient(135deg, #f9f9f9 0%, #e8f5e9 100%);
+        border-left: 5px solid #9aaa8e;
+        border-radius: 15px;
+        padding: 25px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        margin: 100px auto;
+        max-width: 600px;
+        width: 100%;
+    }
+
+    .bank-details-title {
+        color: #9aaa8e;
+        border-bottom: 2px dashed #9aaa8e;
+        font-weight: 700;
+        padding-bottom: 15px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .bank-details-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+    }
+
+    .detail-item {
+        display: flex;
+        align-items: center;
+        padding: 12px;
+        border-radius: 8px;
+        background-color: white;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        transition: transform 0.3s ease;
+    }
+
+    .detail-item:hover {
+        transform: translateY(-3px);
+    }
+
+    .detail-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 12px;
+        flex-shrink: 0;
+    }
+
+    .bank-icon { background-color: #e8f5e9; color: #2e7d32; }
+    .account-icon { background-color: #e3f2fd; color: #1565c0; }
+    .number-icon { background-color: #fff8e1; color: #ff8f00; }
+    .branch-icon { background-color: #ffebee; color: #c62828; }
+
+    .detail-content {
+        flex: 1;
+    }
+
+    .account-number {
+        font-family: monospace;
+        font-size: 1.1em;
+    }
+
+    .bank-details-footer {
+        text-align: center;
+        margin-top: 20px;
+        padding-top: 15px;
+        border-top: 1px solid #e0e0e0;
+        color: #757575;
+    }
+ @media (max-width: 768px) {
+        .bank-details-card {
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        .bank-details-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .bank-details-card {
+            margin: 30px auto;
+            padding: 15px;
+        }
+
+        .detail-item {
+            padding: 10px;
+        }
+
+        .detail-icon {
+            width: 35px;
+            height: 35px;
+            margin-right: 10px;
+        }
+    }
+
     </style>
 </head>
 <body>
@@ -372,13 +659,16 @@
                         <a class="nav-link active" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about-us-en.html">About Us</a>
+                        <a class="nav-link" href="#main">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Projects</a>
+                        <a class="nav-link" href="#about_village">About The Village</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact Us</a>
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact Us</a>
                     </li>
                 </ul>
                 <div class="btn-group" role="group" aria-label="Language Translation">
@@ -389,37 +679,152 @@
               </div>
         </div>
     </nav>
-     <section class="hero-section">
+     <section class="hero-section" id="main">
         <div class="container">
             <div class="hero-content animate__animated animate__fadeInUp">
                 <div class="hero-text">
-                    <h1>Attab Charity Organization <br>Towards an Integrated and Sustainable Community</h1>
+                    <h1>Attab Charity Association<br>Towards an Integrated and Sustainable Community</h1>
                     <p>
-                        Our organization was established in Jan 2025 with the aim of serving the local community and developing the region.<br>
+                        Our association was established in Jan 2025 with the aim of serving the local community and developing the region.<br>
                         We work to achieve sustainable development through integrated programs including education, health,<br>
                         and youth empowerment. We strive to build a better future for coming generations.
                     </p>
                     <a href="about-us-en.html" class="btn btn-primary">Learn More</a>
                 </div>
                 <div class="hero-image">
-                    <img src="port01.jpg" alt="Palm tree image" class="img-fluid">
+                    <img src="image1.jpg" alt="Palm tree image" class="img-fluid">
                 </div>
             </div>
         </div>
     </section>
+    <section class="village-section animate__animated animate__fadeIn" id="about_village">
+        <div class="village-overlay"></div>
+        <div class="village-content">
+            <h2>Attab Village</h2>
+            <p>
+                Attab Village is one of the historic villages in the Northern State of Sudan.
+                The village faces some developmental challenges that our association works to address through sustainable projects
+                that meet the needs of residents and align with their aspirations for a better future.
+            </p>
+            <a href="about_village.html" class="village-btn animate__animated animate__pulse animate__infinite animate__slower">
+                Discover more about the village <i class="fas fa-arrow-right ms-2"></i>
+            </a>
+        </div>
+    </section>
 
-     <!-- Footer -->
+      <section class="projects-section" id="projects">
+        <div class="container">
+            <h2 class="section-title text-center">Our Projects</h2>
+            <p class="text-center mb-5">We are working on several projects to serve the Attab village community</p>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6" style="padding-top:20px">
+                    <div class="project-card animate__animated animate__fadeInUp">
+                        <div class="project-img-container" style="height: 300px; overflow: hidden; display: flex; align-items: center; justify-content: center">
+                            <img src="kinder.png" class="project-img w-100" alt="Kindergarten Project">
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">Children's Kindergarten</h3>
+                            <p class="project-text">Building a modern kindergarten to provide early education for children in the village, helping them develop their skills.</p>
+                            <button class="donate-btn mt-3 w-100" onclick="window.location.href='#donate'">Donate Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" style="padding-top:20px">
+                    <div class="project-card animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
+                     <div class="project-img-container" style="height: 300px; overflow: hidden; display: flex; align-items: center; justify-content: center">
+                        <img src="medical1.png" class="project-img w-100" alt="Medical Center Project">
+                     </div>
+                        <div class="project-body">
+                            <h3 class="project-title">Medical Center</h3>
+                            <p class="project-text">Establishing a health center to provide basic medical services to villagers, including maternal and child health services and emergency care.</p>
+                            <button class="donate-btn mt-3 w-100" onclick="window.location.href='#donate'">Donate Now</button>
+                        </div>
+                    </div>
+                </div>
+               <div class="col-lg-4 col-md-6" style="padding-top:20px">
+                <div class="project-card animate__animated animate__fadeInUp" style="animation-delay: 0.4s;">
+                    <div class="project-img-container" style="height: 300px; overflow: hidden; display: flex; align-items: center; justify-content: center">
+                        <img src="club.png" class="img-fluid" alt="Youth Center Project" style="max-height: 100%; max-width: 100%; object-fit: contain; padding: 20px;">
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">Youth & Sports Center</h3>
+                        <p class="project-text">Creating a center for youth activities and sports to develop skills and talents, and provide healthy recreational opportunities for village youth.</p>
+                        <button class="donate-btn mt-3 w-100" onclick="window.location.href='#donate'">Donate Now</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+    <section id="donate">
+    <div class="bank-details-container">
+        <div class="bank-details-card animate__animated animate__fadeIn">
+            <h4 class="bank-details-title">
+                <i class="fas fa-donate me-2"></i>Bank Donation Account
+            </h4>
+
+            <div class="bank-details-grid">
+                <div class="detail-item">
+                    <div class="detail-icon bank-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="detail-content">
+                        <strong>Bank Name:</strong>
+                        <span>Bank of Khartoum</span>
+                    </div>
+                </div>
+
+                <div class="detail-item">
+                    <div class="detail-icon account-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="detail-content">
+                        <strong>Account Name:</strong>
+                        <span>Atabcharity Associat</span>
+                    </div>
+                </div>
+
+                <div class="detail-item">
+                    <div class="detail-icon number-icon">
+                        <i class="fas fa-hashtag"></i>
+                    </div>
+                    <div class="detail-content">
+                        <strong>Account Number:</strong>
+                        <span class="account-number">9135155</span>
+                    </div>
+                </div>
+
+                <div class="detail-item">
+                    <div class="detail-icon branch-icon">
+                        <i class="fas fa-code-branch"></i>
+                    </div>
+                    <div class="detail-content">
+                        <strong>Branch:</strong>
+                        <span>Abbri</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bank-details-footer">
+                <small>Thank you for supporting our charitable work</small>
+            </div>
+        </div>
+    </div>
+        </div>
+</section>
+
+
+
+
     <footer>
         <div class="footer-wave"></div>
         <div class="container footer-content">
             <div class="row">
-                <!-- First Column: Logo and Organization Description -->
                 <div class="col-lg-4 mb-5 mb-lg-0">
                     <div class="footer-logo animate-footer-item" style="transition-delay: 0.1s;">
-                        <img src="logo.jpg" alt="Attab Charity Organization Logo" class="img-fluid">
+                        <img src="logo.jpg" alt="Attab Charity Association Logo" class="img-fluid">
                     </div>
                     <p class="animate-footer-item" style="transition-delay: 0.2s;">
-                        Attab Charity Organization aims to serve the community and develop the region since Jan 2025
+                        Attab Charity Association  aims to serve the community and develop the region since Jan 2025
                         We work to achieve sustainable development through integrated programs including education,
                         health, and youth empowerment.
                     </p>
@@ -431,17 +836,17 @@
                       </div>
                 </div>
 
-                <!-- العمود الثاني: روابط سريعة -->
                 <div class="col-lg-2 col-md-6 mb-5 mb-md-0">
                     <h3 class="footer-heading animate-footer-item" style="transition-delay: 0.2s;"> Links</h3>
                     <div class="footer-links">
                         <a href="index_en.html" class="animate-footer-item" style="transition-delay: 0.3s;">Home <i class="fas fa-chevron-right"></i></a>
-                        <a href="about-us-en.html" class="animate-footer-item" style="transition-delay: 0.4s;">About Us <i class="fas fa-chevron-right"></i></a>
-                        <a href="#" class="animate-footer-item" style="transition-delay: 0.5s;">Projects <i class="fas fa-chevron-right"></i></a>
-                        <a href="#" class="animate-footer-item" style="transition-delay: 0.7s;">Contact Us <i class="fas fa-chevron-right"></i></a>
+                        <a href="#main" class="animate-footer-item" style="transition-delay: 0.4s;">About Us <i class="fas fa-chevron-right"></i></a>
+                        <a href="#about_village" class="animate-footer-item" style="transition-delay: 0.4s;">About The Village <i class="fas fa-chevron-right"></i></a>
+                        <a href="#projects" class="animate-footer-item" style="transition-delay: 0.5s;">Projects <i class="fas fa-chevron-right"></i></a>
+                        <a href="#contact" class="animate-footer-item" style="transition-delay: 0.7s;">Contact Us <i class="fas fa-chevron-right"></i></a>
                     </div>
                 </div>
-              <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
+              <div class="col-lg-3 col-md-6 mb-5 mb-md-0" id="contact">
                     <h3 class="footer-heading animate-footer-item" style="transition-delay: 0.3s;"> Contact Us</h3>
                     <div class="contact-info">
                         <p class="animate-footer-item" style="transition-delay: 0.4s;">
@@ -466,7 +871,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // ظهور العناصر بالتتابع عند التمرير
         function animateOnScroll() {
             const items = document.querySelectorAll('.animate-footer-item');
             items.forEach(item => {
@@ -482,7 +886,6 @@
         window.addEventListener('scroll', animateOnScroll);
         window.addEventListener('load', animateOnScroll);
 
-        // تأثيرات حركية لأيقونات التواصل الاجتماعي
         const socialIcons = document.querySelectorAll('.social-icons a');
         socialIcons.forEach(icon => {
             icon.addEventListener('mouseenter', () => {
@@ -493,7 +896,6 @@
             });
         });
 
-        // زر العودة للأعلى
         const backToTop = document.querySelector('.back-to-top');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 300) {
@@ -510,7 +912,6 @@
      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script>
-        // إضافة تأثيرات حركية عند التمرير
         document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('mouseenter', () => {
                 link.classList.add('animate__pulse');
@@ -520,7 +921,6 @@
             });
         });
 
-        // تغيير لون الروابط عند التمرير
         const navbar = document.querySelector('.navbar');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
@@ -528,6 +928,23 @@
             } else {
                 navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
             }
+        });
+           document.querySelectorAll('.donate-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                // Scroll to bank details section
+                document.querySelector('.bank-details').scrollIntoView({
+                    behavior: 'smooth'
+                });
+
+                // Add visual feedback
+                this.innerHTML = '<i class="fas fa-heart me-2"></i> Thank You!';
+                this.style.backgroundColor = '#3a4d2e';
+
+                setTimeout(() => {
+                    this.innerHTML = 'Donate Now';
+                    this.style.backgroundColor = '#5a7247';
+                }, 2000);
+            });
         });
     </script>
 </body>

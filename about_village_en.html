@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html dir="rtl" lang="ar">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>جمعية عطب الخيرية</title>
+    <title>Attab Charity Association</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link rel="stylesheet" href="css/common_style.css"></link>
+    <link rel="stylesheet" href="css/common_style.css">
     <style>
-         .photo-grid-section {
+        .photo-grid-section {
             padding: 60px 0;
             background-color: #f8f8f2;
         }
@@ -55,14 +55,14 @@
         .photo-caption {
             position: absolute;
             bottom: 0;
-            right: 0;
             left: 0;
+            right: 0;
             padding: 20px;
             background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
             color: white;
             transform: translateY(100%);
             transition: transform 0.3s ease;
-            text-align: right;
+            text-align: left;
         }
 
         .photo-item:hover .photo-caption {
@@ -106,8 +106,8 @@
             height: 4px;
             background: #b8c5ae;
             bottom: 0;
-            right: 50%;
-            transform: translateX(50%);
+            left: 50%;
+            transform: translateX(-50%);
             border-radius: 2px;
         }
 
@@ -160,7 +160,7 @@
             height: 3px;
             background: var(--secondary-color);
             bottom: -10px;
-            right: 0;
+            left: 0;
         }
         .feature-box {
             background: var(--light-color);
@@ -241,15 +241,15 @@
     .photo-caption {
         position: absolute;
         bottom: 0;
-        right: 0;
         left: 0;
+        right: 0;
         padding: 20px;
         background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
         color: white;
         transform: translateY(100%);
         transition: transform 0.4s ease, opacity 0.3s ease;
         opacity: 0;
-        text-align: right;
+        text-align: left;
     }
 
     .photo-item:hover .photo-caption {
@@ -319,111 +319,106 @@
     <nav class="navbar navbar-expand-lg shadow-sm">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="logo.jpg" alt="شعار الجمعية" class="animate__animated animate__fadeIn">
+                <img src="logo.jpg" alt="Association Logo" class="animate__animated animate__fadeIn">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="تبديل التنقل">
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav animate__animated animate__fadeInDown">
                     <li class="nav-item">
-                        <a class="nav-link " href="index.html">الرئيسية</a>
+                        <a class="nav-link" href="index_en.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about-org.html">عن الجمعية</a>
+                        <a class="nav-link" href="about-us-en.html">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="about_village.html">عن القرية</a>
+                        <a class="nav-link active" href="about_village_en.html">About the Village</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#projects">المشاريع</a>
+                        <a class="nav-link" href="index_en.html#projects">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">تواصل معنا</a>
+                        <a class="nav-link" href="#footer">Contact Us</a>
                     </li>
                 </ul>
                 <div class="btn-group" role="group" aria-label="Language Translation">
-                  <a href="index_en.html" class="btn btn-custom btn-success">
-                      <i class="fas fa-language"></i> EN
+                  <a href="index_ar.html" class="btn btn-custom btn-success">
+                      <i class="fas fa-language"></i> AR
                   </a>
                 </div>
             </div>
-
-        </div>
-
         </div>
     </nav>
 
-      <section class="photo-grid-section">
+    <section class="photo-grid-section">
         <div class="container">
             <div class="grid-title animate-in">
-                <h2>معرض قرية عطب</h2>
+                <h2>Attab Village Gallery</h2>
             </div>
 
             <div class="photo-grid">
                 <div class="photo-item animate-in" style="transition-delay: 0.1s;">
-                    <img src="village1.jpg" alt="منظر عام للقرية">
+                    <img src="village1.jpg" alt="General view of the village">
                     <div class="photo-caption">
-                        <h3>الثروة الحيوانية </h3>
-                        <p>تُشكل قطعان الأبقار والمواشي جزءًا أساسيًا من المشهد الريفي، حيث تختلط أصواتها مع حفيف الأشجار وهمس الرياح</p>
+                        <h3>Livestock Wealth</h3>
+                        <p>Cattle and livestock herds form an essential part of the rural landscape, their sounds mingling with the rustling of trees and whispering winds</p>
                     </div>
                 </div>
 
                 <div class="photo-item animate-in" style="transition-delay: 0.2s;">
-                    <img src="village2.jpg" alt="المسجد القديم">
+                    <img src="village2.jpg" alt="Wheat fields">
                     <div class="photo-caption">
-                        <h3>سنابل القمح</h3>
-                        <p>تظهر مزارع القمح كسجّاد ذهبي يكسو الأرض، بينما تقف أشجار النخيل سامقةً خلفها كحرّاسٍ للتاريخ </p>
+                        <h3>Wheat Fields</h3>
+                        <p>Wheat farms appear like golden carpets covering the land, while palm trees stand tall behind them like guardians of history</p>
                     </div>
                 </div>
 
-
                 <div class="photo-item animate-in" style="transition-delay: 0.4s;">
-                    <img src="village4.jpg" alt="الأطفال">
+                    <img src="village4.jpg" alt="Village mosque">
                     <div class="photo-caption">
-                        <h3>مسجد القرية الكبير</h3>
-                        <p>مسجد القرية الكبير الذي  يمثل مركزًا روحانيًا واجتماعيًا بارزًا، حيث يجسد تراثًا دينيًا عريقًا ويلعب دورًا محوريًا في حياة الأهالي. </p>
+                        <h3>The Grand Village Mosque</h3>
+                        <p>The village's grand mosque represents a prominent spiritual and social center, embodying a rich religious heritage and playing a pivotal role in the lives of the residents.</p>
                     </div>
                 </div>
 
                 <div class="photo-item animate-in" style="transition-delay: 0.5s;">
-                    <img src="village5.jpg" alt="الحرف اليدوية">
+                    <img src="village5.jpg" alt="Nile River">
                     <div class="photo-caption">
-                        <h3>نيلنا</h3>
-                        <p>ينساب النيل كشريان فضيّ محاطًا بأشجار النخيل السامقة، كأنهما خُلقا ليكمّل أحدهما الآخر.</p>
+                        <h3>Our Nile</h3>
+                        <p>The Nile flows like a silver artery surrounded by towering palm trees, as if they were created to complement each other.</p>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
-        <section class="about-village">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6 animate-in">
-                            <h2 class="section-title">نبذة عن قرية عطب</h2>
-                            <p>
-                                تقع قرية عطب في الولاية الشمالية بالسودان،قرية عطب تقع في الولاية الشمالية محلية حلفا منطقة السكوت وحدة عبري الإدارية تبعد عن مدينة عبري 10 كيلو مترات باتجاه الشرق بمحاذاة الضفة الشرقية لنهر النيل.
-                            </p>
-                            <p>
-                                يعتمد سكان القرية على الزراعة التقليدية وتربية المواشي كمصادر رئيسية للدخل.
-                            </p>
-                            <p>
-                                يبلغ عدد سكان القرية حوالي 3000 نسمة، ويتميز أهلها بالكرم وحسن الضيافة،
-                                كما يحافظون على تقاليدهم وعاداتهم الأصيلة التي توارثوها عن أجدادهم.
-                            </p>
-                        </div>
-                        <div class="col-lg-6 animate-in" style="transition-delay: 0.2s;">
-                            <img src="village.jpg" alt="قرية عطب" class="img-fluid rounded shadow">
-                        </div>
-                    </div>
-                </div>
-        </section>
-        <section class="village-map">
+    <section class="about-village">
         <div class="container">
-            <h2 class="section-title text-center animate-in">موقع القرية</h2>
+            <div class="row">
+                <div class="col-lg-6 animate-in">
+                    <h2 class="section-title">About Attab Village</h2>
+                    <p>
+                        Attab Village is located in the Northern State of Sudan, specifically in the Halfa locality, Al-Sukoot area, and the administrative unit of Abri. It is located 10 kilometers east of Abri city along the eastern bank of the Nile River.
+                    </p>
+                    <p>
+                        The village residents depend on traditional agriculture and livestock raising as their main sources of income.
+                    </p>
+                    <p>
+                        The village has a population of about 3,000 people, known for their generosity and hospitality. They maintain their authentic traditions and customs inherited from their ancestors.
+                    </p>
+                </div>
+                <div class="col-lg-6 animate-in" style="transition-delay: 0.2s;">
+                    <img src="village.jpg" alt="Attab Village" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="village-map">
+        <div class="container">
+            <h2 class="section-title text-center animate-in">Village Location</h2>
             <div class="animate-in" style="transition-delay: 0.3s;">
                 <div class="map-container">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3639.234567890123!2d31.2345678!3d19.1234567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDA3JzI0LjQiTiAzMcKwMTQnMDcuNiJF!5e0!3m2!1sen!2sus!4v1623456789012!5m2!1sen!2sus"
@@ -434,49 +429,47 @@
                             loading="lazy">
                     </iframe>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <footer>
+    <footer id="footer">
         <div class="footer-wave"></div>
         <div class="container footer-content">
             <div class="row">
                 <div class="col-lg-4 mb-5 mb-lg-0">
                     <div class="footer-logo animate-footer-item" style="transition-delay: 0.1s;">
-                        <img src="logo.jpg" alt="شعار جمعية عطب الخيرية" class="img-fluid">
+                        <img src="logo.jpg" alt="Attab Charity Association Logo" class="img-fluid">
                     </div>
                     <p class="animate-footer-item" style="transition-delay: 0.2s;">
-                        جمعية عطب الخيرية تهدف إلى خدمة المجتمع وتنمية المنطقة منذ يناير 2025.
-                        نعمل على تحقيق التنمية المستدامة من خلال برامج متكاملة تشمل التعليم،
-                        الصحة.
+                        Attab Charity Association aims to serve the community and develop the region since Jan 2025
+                        We work to achieve sustainable development through integrated programs including education,
+                        health, and youth empowerment.
                     </p>
-                    <div class="social-icons mt-4 animate-footer-item" style="transition-delay: 0.3s;">
+                    <div class="social-icons mt-4 animate-footer-item">
                         <a href="#" class="animate__animated animate__pulse"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" class="animate__animated animate__pulse"><i class="fab fa-twitter"></i></a>
                         <a href="#" class="animate__animated animate__pulse"><i class="fab fa-instagram"></i></a>
                         <a href="#" class="animate__animated animate__pulse"><i class="fab fa-youtube"></i></a>
-                    </div>
+                      </div>
                 </div>
 
                 <div class="col-lg-2 col-md-6 mb-5 mb-md-0">
-                    <h3 class="footer-heading animate-footer-item" style="transition-delay: 0.2s;">روابط سريعة</h3>
+                    <h3 class="footer-heading animate-footer-item" style="transition-delay: 0.2s;"> Links</h3>
                     <div class="footer-links">
-                        <a href="index.html" class="animate-footer-item" style="transition-delay: 0.3s;">الرئيسية <i class="fas fa-chevron-left"></i></a>
-                        <a href="about-org.html" class="animate-footer-item" style="transition-delay: 0.4s;">عن الجمعية <i class="fas fa-chevron-left"></i></a>
-                        <a href="about_village.html" class="animate-footer-item" style="transition-delay: 0.5s;">عن القرية <i class="fas fa-chevron-left"></i></a>
-                        <a href="index.html#projects" class="animate-footer-item" style="transition-delay: 0.6s;"> المشاريع<i class="fas fa-chevron-left"></i></a>
-                        <a href="#" class="animate-footer-item" style="transition-delay: 0.7s;">تواصل معنا <i class="fas fa-chevron-left"></i></a>
+                        <a href="index_en.html" class="animate-footer-item" style="transition-delay: 0.3s;">Home <i class="fas fa-chevron-right"></i></a>
+                        <a href="about-us-en.html" class="animate-footer-item" style="transition-delay: 0.4s;">About Us <i class="fas fa-chevron-right"></i></a>
+                        <a href="about_village_en.html" class="animate-footer-item" style="transition-delay: 0.4s;">About The Village <i class="fas fa-chevron-right"></i></a>
+                        <a href="index_en.html#projects" class="animate-footer-item" style="transition-delay: 0.5s;">Projects <i class="fas fa-chevron-right"></i></a>
+                        <a href="#" class="animate-footer-item" style="transition-delay: 0.7s;">Contact Us <i class="fas fa-chevron-right"></i></a>
                     </div>
                 </div>
-
-                <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
-                    <h3 class="footer-heading animate-footer-item" style="transition-delay: 0.3s;">تواصل معنا</h3>
+              <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
+                    <h3 class="footer-heading animate-footer-item" style="transition-delay: 0.3s;"> Contact Us</h3>
                     <div class="contact-info">
                         <p class="animate-footer-item" style="transition-delay: 0.4s;">
                             <i class="fas fa-map-marker-alt"></i>
-                            السودان - الولاية الشمالية - عبري
+                            Sudan - Northern State - Abri
                         </p>
                         <p class="animate-footer-item" style="transition-delay: 0.5s;">
                             <i class="fas fa-phone-alt"></i>
@@ -484,11 +477,11 @@
                         </p>
                         <p class="animate-footer-item" style="transition-delay: 0.6s;">
                             <i class="fas fa-envelope"></i>
-                            info@atab-charity.org
+                            info@attab-charity.org
                         </p>
                     </div>
                 </div>
-            <a href="#" class="back-to-top animate__animated animate__fadeInUp">
+<a href="#" class="back-to-top animate__animated animate__fadeInUp">
                 <i class="fas fa-arrow-up"></i>
             </a>
         </div>
@@ -534,9 +527,5 @@
             }
         });
     </script>
-
-
-
 </body>
 </html>
-

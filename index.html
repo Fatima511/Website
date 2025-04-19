@@ -10,75 +10,12 @@
      <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <style>
-        body {
-            background-color: #ececdb;
-        }
-        .navbar {
-            background-color: #efedd8 !important;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            font-weight: 600 !important;
-        }
-        .navbar-brand img {
-            height: 80px;
-            width: 80px;
-            transition: transform 0.3s ease;
-        }
-        .navbar-brand:hover img {
-            transform: scale(1.1) rotate(-5deg);
-        }
-        .nav-link {
-            font-size: 1.1rem;
-            font-weight: 500;
-            margin: 0 0.5rem;
-            color: #333;
-            transition: all 0.4s ease;
-            position: relative;
-            padding: 8px 15px;
-            border-radius: 20px;
+    <link rel="stylesheet" href="css/common_style.css"></link>
 
-            font-weight: 600 !important;
-        }
-        .nav-link:hover {
-            color: #5a7247 !important;
-            transform: translateY(-3px);
-            background-color: rgba(184, 197, 174, 0.3);
-        }
-        .nav-link:active {
-            transform: translateY(1px);
-        }
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: 0;
-            right: 0;
-            background-color: #5a7247;
-            transition: width 0.3s ease;
-        }
-        .nav-link:hover::after {
-            width: 100%;
-            right: auto;
-            left: 0;
-        }
-        .nav-link.active {
-            background-color: #b8c5ae;
-            color: white !important;
-            font-weight: 700;
-        }
-        .navbar-toggler {
-            margin-left: 0;
-            border: none;
-            padding: 10px;
-        }
-        .navbar-toggler:focus {
-            box-shadow: 0 0 0 3px rgba(184, 197, 174, 0.5);
-        }
-        .navbar-toggler-icon {
-            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-        }
-.hero-section {
+    <style>
+
+
+    .hero-section {
             padding: 80px 0;
             background-color: #f8f8f2;
         }
@@ -133,25 +70,12 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
-        /* تأثيرات responsive */
-        @media (max-width: 992px) {
-            .hero-content {
-                flex-direction: column-reverse;
-            }
-            .hero-text {
-                padding-left: 0;
-                margin-top: 40px;
-                text-align: center;
-            }
-            .hero-image {
-                text-align: center;
-            }
-        }
+
 
         .village-section {
             position: relative;
             padding: 120px 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url('village2.jpg') no-repeat center center;            background-size: cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url('village2.jpg') no-repeat center center;            background-size: cover;
             color: white;
             text-align: center;
             overflow: hidden;
@@ -297,215 +221,149 @@
                 margin-bottom: 30px;
             }
         }
+                    .projects-section {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
 
-        footer {
-            background: linear-gradient(135deg, #5a7247 0%, #3a4d2e 100%);
-            color: #fff;
-            padding: 60px 0 20px;
-            position: relative;
+        .project-card {
+            border: none;
+            border-radius: 15px;
             overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+            margin-bottom: 30px;
+            height: 100%;
+            background: white;
         }
 
-        .footer-wave {
-            position: absolute;
-            top: -50px;
-            left: 0;
-            width: 100%;
-            height: 50px;
-            background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="%23efedd8" opacity=".25"/><path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" fill="%23efedd8" opacity=".5"/><path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="%23efedd8"/></svg>');
-            background-size: cover;
-            animation: waveAnimation 8s linear infinite;
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
         }
 
-        @keyframes waveAnimation {
-            0% { background-position-x: 0; }
-            100% { background-position-x: 1200px; }
-        }
-
-        .footer-content {
-            position: relative;
-            z-index: 1;
-        }
-
-        .footer-logo img {
-            height: 80px;
-            width: auto;
-            margin-bottom: 20px;
+        .project-img {
+            height: 250px;
+            object-fit: cover;
             transition: transform 0.5s ease;
         }
 
-        .footer-logo:hover img {
-            transform: rotate(-5deg) scale(1.1);
+        .project-card:hover .project-img {
+            transform: scale(1.05);
         }
 
-        .footer-heading {
-            font-size: 1.5rem;
+        .project-body {
+            padding: 25px;
+        }
+
+        .project-title {
+            color: #5a7247;
             font-weight: 700;
-            margin-bottom: 25px;
-            position: relative;
-            display: inline-block;
+            margin-bottom: 15px;
         }
 
-        .footer-heading::after {
-            content: '';
-            position: absolute;
-            width: 50%;
-            height: 3px;
-            background: #b8c5ae;
-            bottom: -10px;
-            right: 0;
-            transition: width 0.3s ease;
-        }
-
-        .footer-heading:hover::after {
-            width: 100%;
-        }
-
-        .footer-links a {
-            color: #e0e0e0;
-            display: block;
-            margin-bottom: 12px;
-            transition: all 0.3s ease;
-            text-decoration: none;
-        }
-
-        .footer-links a:hover {
-            color: #fff;
-            transform: translateX(-10px);
-            text-shadow: 0 0 5px rgba(255,255,255,0.3);
-        }
-
-        .footer-links a i {
-            margin-left: 8px;
-            font-size: 0.9rem;
-        }
-
-        .contact-info {
+        .project-text {
+            color: #555;
             margin-bottom: 20px;
         }
 
-        .contact-info p {
-            margin-bottom: 15px;
-            display: flex;
-            align-items: flex-start;
+        .progress {
+            height: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
         }
 
-        .contact-info i {
-            margin-left: 10px;
-            font-size: 1.2rem;
-            color: #b8c5ae;
-            margin-top: 3px;
+        .progress-bar {
+            background-color: #5a7247;
         }
 
-        .social-icons a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background: rgba(255,255,255,0.1);
-            color: #fff;
-            border-radius: 50%;
-            margin-left: 10px;
+        .donation-info {
+            background-color: #f8f8f2;
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .bank-details {
+            background-color: #f8f8f2;
+   padding: 25px;
+            border-radius: 10px;
+            margin-top: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .bank-details h4 {
+            color: #5a7247;
+            margin-bottom: 20px;
+        }
+
+        .bank-details p {
+            margin-bottom: 10px;
+        }
+
+        .donate-btn {
+            background-color: #5a7247;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: 500;
             transition: all 0.3s ease;
         }
 
-        .social-icons a:hover {
-            background: #b8c5ae;
-            transform: translateY(-5px) rotate(10deg);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
+        .donate-btn:hover {
+            background-color: #3a4d2e;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            }
+            .bank-details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+  }
+  .detail-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+  }
 
-        .newsletter-form {
-            display: flex;
-            margin-top: 20px;
-        }
+  .detail-item:hover {
+    transform: translateY(-3px);
+  }
 
-        .newsletter-form input {
-            flex: 1;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 30px 0 0 30px;
-            background: rgba(255,255,255,0.2);
-            color: #fff;
-        }
+  .detail-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 12px;
+  }
+   .detail-content {
+    flex: 1;
+  }
 
-        .newsletter-form input::placeholder {
-            color: #e0e0e0;
-        }
+  .detail-content strong {
+    color: #616161;
+    margin-left: 5px;
+  }
 
-        .newsletter-form button {
-            background: #b8c5ae;
-            color: #333;
-            border: none;
-            padding: 0 20px;
-            border-radius: 0 30px 30px 0;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
+  @media (max-width: 576px) {
+    .bank-details-card {
+      padding: 20px 15px;
+    }
 
-        .newsletter-form button:hover {
-            background: #9aaa8e;
-        }
+    .bank-details-grid {
+      grid-template-columns: 1fr;
+    }
+  }
 
-        .copyright {
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 20px;
-            margin-top: 40px;
-            text-align: center;
-            font-size: 0.9rem;
-        }
-
-        .back-to-top {
-            position: absolute;
-            top: -25px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 50px;
-            height: 50px;
-            background: #b8c5ae;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #333;
-            font-size: 1.2rem;
-            box-shadow: 0 0 20px rgba(0,0,0,0.2);
-            transition: all 0.3s ease;
-            animation: floatAnimation 3s ease-in-out infinite;
-        }
-
-        .back-to-top:hover {
-            background: #9aaa8e;
-            transform: translateX(-50%) translateY(-5px);
-        }
-
-        @keyframes floatAnimation {
-            0%, 100% { transform: translateX(-50%) translateY(0); }
-            50% { transform: translateX(-50%) translateY(-10px); }
-        }
-
-        /* تأثيرات الحركة */
-        .animate-footer-item {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.5s ease;
-        }
-
-        .animate-footer-item.show {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .btn-custom {
-            border: none;
-            padding: 5px 15px;
-            transition: transform 0.2s;
-             background:  #b8c5ae;}
-
-        .btn-custom:hover {
-            background-color: rgba(184, 197, 174, 0.3);
-            transform: scale(1.05);
-        }
     </style>
 </head>
 <body>
@@ -524,16 +382,16 @@
                         <a class="nav-link active" href="#">الرئيسية</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about-org.html">عن الجمعية</a>
+                        <a class="nav-link" href="#main">عن الجمعية</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about_village.html">عن القرية</a>
+                        <a class="nav-link" href="#about_village">عن القرية</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">المشاريع</a>
+                        <a class="nav-link" href="#projects">المشاريع</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">تواصل معنا</a>
+                        <a class="nav-link" href="#footer">تواصل معنا</a>
                     </li>
                 </ul>
                 <div class="btn-group" role="group" aria-label="Language Translation">
@@ -548,7 +406,7 @@
         </div>
     </nav>
 
-       <section class="hero-section">
+       <section class="hero-section" id="main">
         <div class="container">
             <div class="hero-content animate__animated animate__fadeInUp">
                 <div class="hero-text">
@@ -561,13 +419,13 @@
                     <a href="about-org.html" class="btn btn-primary">تعرف علينا أكثر</a>
                 </div>
                 <div class="hero-image">
-                    <img src="image1.jpg" alt="صورة نخلة" class="img-fluid">
+                    <img src="image1.jpg"  class="img-fluid">
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="village-section animate__animated animate__fadeIn">
+    <section class="village-section animate__animated animate__fadeIn" id="about_village">
         <div class="village-overlay"></div>
         <div class="village-content">
             <h2>قرية عطب</h2>
@@ -581,15 +439,114 @@
             </a>
         </div>
     </section>
+    <section class="projects-section"  id="projects">
+    <div class="container">
+        <h2 class="section-title text-center">مشاريعنا</h2>
+        <p class="text-center mb-5">نعمل على عدة مشاريع لخدمة مجتمع قرية عطب</p>
 
+        <div class="row">
+            <div class="col-lg-4 col-md-6" style="padding-top:20px">
+                <div class="project-card animate__animated animate__fadeInUp" style="padding-top:20px">
+                    <div class="project-img-container" style="height: 300px; overflow: hidden; display: flex; align-items: center; justify-content: center">
+                        <img src="kinder.png" class="project-img w-100" alt="مشروع الروضة">
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">روضة الأطفال</h3>
+                        <p class="project-text">بناء روضة حديثة لتوفير التعليم المبكر للأطفال في القرية، ومساعدتهم على تنمية مهاراتهم.</p>
+                        <br>
+                        <button class="donate-btn mt-3 w-100"  onclick="window.location.href='#donate'">تبرع الآن</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6" style="padding-top:20px">
+                <div class="project-card animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
+                    <div class="project-img-container" style="height: 300px; overflow: hidden; display: flex; align-items: center; justify-content: center">
+                        <img src="medical1.png" class="project-img w-100" alt="مشروع المركز الطبي">
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">المركز الطبي</h3>
+                        <p class="project-text">إنشاء مركز صحي لتقديم الخدمات الطبية الأساسية لأهالي القرية، بما في ذلك خدمات الأمومة والطفولة والرعاية الطارئة.</p>
+                        <button class="donate-btn mt-3 w-100 " onclick="window.location.href='#donate'">تبرع الآن</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6" style="padding-top:20px">
+                <div class="project-card animate__animated animate__fadeInUp" style="animation-delay: 0.4s;">
+                    <div class="project-img-container" style="height: 300px; overflow: hidden; display: flex; align-items: center; justify-content: center">
+                        <img src="club.png" class="img-fluid" alt="مشروع مركز الشباب" style="max-height: 100%; max-width: 100%; object-fit: contain; padding: 20px;">
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">مركز الشباب والرياضة</h3>
+                        <p class="project-text">إنشاء مركز للأنشطة الشبابية والرياضية لتنمية المهارات والمواهب، وتوفير فرص ترفيهية صحية لشباب القرية.</p>
+                        <br>
+                        <button class="donate-btn mt-3 w-100"  onclick="window.location.href='#donate'">تبرع الآن</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+<section class="donate" id="donate">
+     <div class="bank-details-container" style="direction: rtl; font-family: 'Tajawal', sans-serif;">
+         <div class="bank-details-card animate__animated animate__fadeIn p-4 rounded-4 shadow-lg" style="background: linear-gradient(135deg, #f9f9f9 0%, #e8f5e9 100%); border-right: 5px solid #9aaa8e; max-width: 600px; margin: 0 auto;margin-top:100px">
+            <h4 class="text-center mb-4 pb-2" style="color: #9aaa8e; border-bottom: 2px dashed #9aaa8e; font-weight: 700;">
+                <i class="fas fa-donate me-2"></i>حساب التبرعات البنكي
+            </h4>
 
+        <div class="bank-details-grid">
+          <div class="detail-item">
+            <div class="detail-icon" style="background-color: #e8f5e9;">
+              <i class="fas fa-university" style="color: #2e7d32;"></i>
+            </div>
+            <div class="detail-content">
+              <strong>اسم البنك:</strong>
+              <span>بنك الخرطوم</span>
+            </div>
+          </div>
 
+          <div class="detail-item">
+            <div class="detail-icon" style="background-color: #e3f2fd;">
+              <i class="fas fa-user" style="color: #1565c0;"></i>
+            </div>
+            <div class="detail-content">
+              <strong>اسم الحساب:</strong>
+              <span>جمعية عطب الخيرية</span>
+            </div>
+          </div>
 
-    <footer>
+          <div class="detail-item">
+            <div class="detail-icon" style="background-color: #fff8e1;">
+              <i class="fas fa-hashtag" style="color: #ff8f00;"></i>
+            </div>
+            <div class="detail-content">
+              <strong>رقم الحساب:</strong>
+              <span style="font-family: monospace; font-size: 1.1em;">9135155</span>
+            </div>
+          </div>
+
+          <div class="detail-item">
+            <div class="detail-icon" style="background-color: #ffebee;">
+              <i class="fas fa-code-branch" style="color: #c62828;"></i>
+            </div>
+            <div class="detail-content">
+              <strong>الفرع:</strong>
+              <span>عبري</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-4 pt-3" style="border-top: 1px solid #e0e0e0;">
+          <small style="color: #757575;">شكراً لدعمكم ومساهمتكم في أعمالنا الخيرية</small>
+        </div>
+    </div>
+    </div>
+    </section>
+    </div>
+
+</section>
+
+    <footer id="footer">
         <div class="footer-wave"></div>
         <div class="container footer-content">
             <div class="row">
-                <!-- العمود الأول: الشعار ووصف الجمعية -->
                 <div class="col-lg-4 mb-5 mb-lg-0">
                     <div class="footer-logo animate-footer-item" style="transition-delay: 0.1s;">
                         <img src="logo.jpg" alt="شعار جمعية عطب الخيرية" class="img-fluid">
@@ -607,19 +564,17 @@
                     </div>
                 </div>
 
-                <!-- العمود الثاني: روابط سريعة -->
                 <div class="col-lg-2 col-md-6 mb-5 mb-md-0">
                     <h3 class="footer-heading animate-footer-item" style="transition-delay: 0.2s;">روابط سريعة</h3>
                     <div class="footer-links">
                         <a href="index.html" class="animate-footer-item" style="transition-delay: 0.3s;">الرئيسية <i class="fas fa-chevron-left"></i></a>
-                        <a href="about-org.html" class="animate-footer-item" style="transition-delay: 0.4s;">عن الجمعية <i class="fas fa-chevron-left"></i></a>
-                        <a href="#" class="animate-footer-item" style="transition-delay: 0.5s;">المشاريع <i class="fas fa-chevron-left"></i></a>
-                        <a href="about_village.html" class="animate-footer-item" style="transition-delay: 0.6s;">عن القرية <i class="fas fa-chevron-left"></i></a>
+                        <a href="#main" class="animate-footer-item" style="transition-delay: 0.4s;">عن الجمعية <i class="fas fa-chevron-left"></i></a>
+                        <a href="#about_village" class="animate-footer-item" style="transition-delay: 0.6s;">عن القرية <i class="fas fa-chevron-left"></i></a>
+                        <a href="#projects" class="animate-footer-item" style="transition-delay: 0.5s;">المشاريع <i class="fas fa-chevron-left"></i></a>
                         <a href="#" class="animate-footer-item" style="transition-delay: 0.7s;">تواصل معنا <i class="fas fa-chevron-left"></i></a>
                     </div>
                 </div>
 
-                <!-- العمود الثالث: معلومات التواصل -->
                 <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
                     <h3 class="footer-heading animate-footer-item" style="transition-delay: 0.3s;">تواصل معنا</h3>
                     <div class="contact-info">
@@ -637,13 +592,8 @@
                         </p>
                     </div>
                 </div>
-            <!-- حقوق النشر -->
-            <div class="copyright animate-footer-item" style="transition-delay: 0.7s;">
-                <p>جميع الحقوق محفوظة &copy; 2023 جمعية عطب الخيرية</p>
-            </div>
 
-            <!-- زر العودة للأعلى -->
-            <a href="#" class="back-to-top animate__animated animate__fadeInUp">
+                <a href="#" class="back-to-top animate__animated animate__fadeInUp">
                 <i class="fas fa-arrow-up"></i>
             </a>
         </div>
