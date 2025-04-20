@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Attab Charity Organization | Vision & Mission</title>
+    <title>Attab Charity Organization | About Us</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
@@ -116,6 +116,133 @@
             opacity: 1;
             transform: scale(1) translateY(0);
         }
+        .goals-section {
+        background-color: #f8f9fa;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .goal-card {
+        border: none;
+        border-radius: 15px;
+        background: white;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        transition: all 0.5s ease;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .goal-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(90, 114, 71, 0.2);
+    }
+
+    .goal-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 5px;
+        background: linear-gradient(90deg, #5a7247, #8a9e6e);
+        transition: all 0.3s ease;
+    }
+
+    .goal-card:hover::before {
+        height: 8px;
+    }
+
+    .goal-icon {
+        position: relative;
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .goal-icon i {
+        font-size: 2.5rem;
+        color: #5a7247;
+        position: relative;
+        z-index: 2;
+        transition: all 0.3s ease;
+    }
+
+    .goal-card:hover .goal-icon i {
+        transform: scale(1.1);
+        color: white;
+    }
+
+    .icon-bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #e8f0e1;
+        border-radius: 50%;
+        z-index: 1;
+        transition: all 0.3s ease;
+    }
+
+    .goal-card:hover .icon-bg {
+        background: #5a7247;
+        transform: scale(1.1);
+    }
+
+    .goal-title {
+        color: #5a7247;
+        font-weight: 700;
+        margin-bottom: 15px;
+        position: relative;
+        padding-bottom: 10px;
+    }
+
+    .goal-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 50%;
+        transform: translateX(50%);
+        width: 50px;
+        height: 2px;
+        background: #e8f0e1;
+        transition: all 0.3s ease;
+    }
+
+    .goal-card:hover .goal-title::after {
+        background: #5a7247;
+        width: 70px;
+    }
+
+    .goal-text {
+        color: #666;
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .goal-number {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        width: 30px;
+        height: 30px;
+        background: #f8f9fa;
+        color: #5a7247;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+    }
+
+    .goal-card:hover .goal-number {
+        background: #5a7247;
+        color: white;
+    }
     </style>
 </head>
 <body>
@@ -147,7 +274,7 @@
                     </li>
                 </ul>
                 <div class="btn-group" role="group" aria-label="Language Translation">
-                  <a href="index_ar.html" class="btn btn-custom btn-success">
+                  <a href="about-org.html" class="btn btn-custom btn-success">
                       <i class="fas fa-language"></i> AR
                   </a>
                 </div>
@@ -198,6 +325,120 @@
             </div>
         </div>
     </section>
+    <section class="goals-section py-5">
+    <div class="container">
+        <h2 class="section-title text-center animate-on-scroll">Our Objectives</h2>
+        <div class="row justify-content-center gy-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="card goal-card animate-on-scroll">
+                    <div class="card-body text-center p-4">
+                        <div class="goal-icon mb-3">
+                            <i class="fas fa-hands-helping"></i>
+                            <div class="icon-bg"></div>
+                        </div>
+                        <h3 class="goal-title">Community Development</h3>
+                        <p class="goal-text">
+                            Elevating the local community and fostering cooperation and volunteerism,
+                            while supporting eligible families with financial and in-kind assistance
+                        </p>
+                        <div class="goal-number">1</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card goal-card animate-on-scroll" style="transition-delay: 0.2s;">
+                    <div class="card-body text-center p-4">
+                        <div class="goal-icon mb-3">
+                            <i class="fas fa-heart"></i>
+                            <div class="icon-bg"></div>
+                        </div>
+                        <h3 class="goal-title">Social Support</h3>
+                        <p class="goal-text">
+                            Marriage grants to encourage youth,
+                            disaster relief assistance,
+                            and seasonal charity projects (winter - Ramadan - school)
+                        </p>
+                        <div class="goal-number">2</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card goal-card animate-on-scroll" style="transition-delay: 0.4s;">
+                    <div class="card-body text-center p-4">
+                        <div class="goal-icon mb-3">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div class="icon-bg"></div>
+                        </div>
+                        <h3 class="goal-title">Education & Training</h3>
+                        <p class="goal-text">
+                            Upgrade the school to become a model institution and establish a school library
+                                Enhance educational standards and skill development
+                                Establish kindergarten facilities
+                                        </p>
+                        <div class="goal-number">3</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card goal-card animate-on-scroll">
+                    <div class="card-body text-center p-4">
+                        <div class="goal-icon mb-3">
+                            <i class="fas fa-clinic-medical"></i>
+                            <div class="icon-bg"></div>
+                        </div>
+                        <h3 class="goal-title">Healthcare</h3>
+                        <p class="goal-text">
+                            Establishing a health center in the village,
+                            providing medical equipment,
+                            supporting people with special needs,
+                            and orphan sponsorship
+                        </p>
+                        <div class="goal-number">4</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card goal-card animate-on-scroll" style="transition-delay: 0.2s;">
+                    <div class="card-body text-center p-4">
+                        <div class="goal-icon mb-3">
+                            <i class="fas fa-tree"></i>
+                            <div class="icon-bg"></div>
+                        </div>
+                        <h3 class="goal-title">Environment & Climate</h3>
+                        <p class="goal-text">
+                            Protecting natural resources and afforestation,
+                            adapting to climate changes,
+                            crisis management and agricultural season planning
+                        </p>
+                        <div class="goal-number">5</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card goal-card animate-on-scroll" style="transition-delay: 0.4s;">
+                    <div class="card-body text-center p-4">
+                        <div class="goal-icon mb-3">
+                            <i class="fas fa-handshake"></i>
+                            <div class="icon-bg"></div>
+                        </div>
+                        <h3 class="goal-title">Partnerships & Empowerment</h3>
+                        <p class="goal-text">
+                            Strategic partnerships with donors,
+                            economic empowerment and poverty alleviation
+                            through vocational training programs
+                        </p>
+                        <div class="goal-number">6</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <footer id="footer">
         <div class="footer-wave"></div>
@@ -212,12 +453,7 @@
                         We work to achieve sustainable development through integrated programs including education,
                         health.
                     </p>
-                    <div class="social-icons mt-4 animate-footer-item" style="transition-delay: 0.3s;">
-                        <a href="#" class="animate__animated animate__pulse"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="animate__animated animate__pulse"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="animate__animated animate__pulse"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="animate__animated animate__pulse"><i class="fab fa-youtube"></i></a>
-                    </div>
+
                 </div>
 
                 <div class="col-lg-2 col-md-6 mb-5 mb-md-0">
@@ -227,7 +463,7 @@
                         <a href="about-us-en.html" class="animate-footer-item" style="transition-delay: 0.4s;"><i class="fas fa-chevron-right"></i> About Us</a>
                         <a href="about_village_en.html" class="animate-footer-item" style="transition-delay: 0.5s;"><i class="fas fa-chevron-right"></i> About The Village</a>
                         <a href="index_en.html#projects" class="animate-footer-item" style="transition-delay: 0.6s;"><i class="fas fa-chevron-right"></i> Projects</a>
-                        <a href="#" class="animate-footer-item" style="transition-delay: 0.7s;"><i class="fas fa-chevron-right"></i> Contact Us</a>
+                        <a href="#footer" class="animate-footer-item" style="transition-delay: 0.7s;"><i class="fas fa-chevron-right"></i> Contact Us</a>
                     </div>
                 </div>
 
@@ -235,12 +471,23 @@
                     <h3 class="footer-heading animate-footer-item" style="transition-delay: 0.3s;">Contact Us</h3>
                     <div class="contact-info">
                         <p class="animate-footer-item" style="transition-delay: 0.4s;">
-                            <i class="fas fa-map-marker-alt"></i>
+                            <i class="fas fa-map-marker-alt"> </i>
                             Sudan - Northern State - Abri
                         </p>
+                         <p class="animate-footer-item" style="transition-delay: 0.5s;">
+                            <i class="fas fa-phone-alt"> </i>
+                            <span dir="ltr" style="display: inline-block;">+249 961 886 858</span>
+                        </p>
                         <p class="animate-footer-item" style="transition-delay: 0.5s;">
-                            <i class="fas fa-phone-alt"></i>
-                            +966 12 345 6789
+                            <a href="https://www.facebook.com/profile.php?id=61575207501856" class="animate__animated animate__pulse" style="color: inherit;">
+                                <i class="fab fa-facebook-f"> </i> Attab Charity Page
+                            </a>
+                        </p>
+                        <p class="animate-footer-item" style="transition-delay: 0.5s;">
+                            <a href="https://wa.me/249961886858" style="color: inherit; text-decoration: none;">
+                                <i class="fab fa-whatsapp"> </i>
+                                <span dir="ltr" style="display: inline-block;">+249 961 886 858</span>
+                            </a>
                         </p>
                         <p class="animate-footer-item" style="transition-delay: 0.6s;">
                             <i class="fas fa-envelope"></i>
