@@ -19,7 +19,16 @@
 
     <style>
 
+ .btn-custom {
+            border: none;
+            padding: 5px 15px;
+            transition: transform 0.2s;
+             background: linear-gradient(135deg, #5a7247 0%, #3a4d2e 100%);}
 
+        .btn-custom:hover {
+            background-color: rgba(184, 197, 174, 0.3);
+            transform: scale(1.05);
+        }
     .hero-section {
             padding: 80px 0;
             background-color: #f8f8f2;
@@ -398,12 +407,13 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#footer">تواصل معنا</a>
                     </li>
+                     <div class="btn-group" role="group" aria-label="Language Translation">
+                          <a href="index_en.html" class="btn btn-custom btn-success">
+                               <i class="fas fa-language"></i> EN
+                          </a>
+                     </div>
                 </ul>
-                <div class="btn-group" role="group" aria-label="Language Translation">
-                  <a href="index_en.html" class="btn btn-custom btn-success">
-                      <i class="fas fa-language"></i> EN
-                  </a>
-                </div>
+
             </div>
 
         </div>
@@ -452,15 +462,15 @@
         <div class="row">
             <div class="col-lg-4 col-md-6" style="padding-top:20px">
                <div class="project-card animate__animated animate__fadeInUp" style="padding-top:20px">
-    <div class="project-img-container" style="height: 300px; overflow: hidden; display: flex; align-items: center; justify-content: center; background: #f5f5f5;">
-        <img src="img/kinder.jpg" class="project-img w-100 h-100" alt="مشروع الروضة" style="object-fit: cover; object-position: center;">
-    </div>
-    <div class="project-body">
-        <h3 class="project-title">روضة الأطفال</h3>
-        <p class="project-text">بناء روضة حديثة لتوفير التعليم المبكر للأطفال في القرية، ومساعدتهم على تنمية مهاراتهم.</p>
-        <button class="donate-btn mt-3 w-100" onclick="window.location.href='#donate'">تبرع الآن</button>
-    </div>
-</div>
+                    <div class="project-img-container" style="height: 300px; overflow: hidden; display: flex; align-items: center; justify-content: center; background: #f5f5f5;">
+                        <img src="img/kinder.jpg" class="project-img w-100 h-100" alt="مشروع الروضة" style="object-fit: cover; object-position: center;">
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">روضة الأطفال</h3>
+                        <p class="project-text">بناء روضة حديثة لتوفير التعليم المبكر للأطفال في القرية، ومساعدتهم على تنمية مهاراتهم.</p>
+                        <button class="donate-btn mt-3 w-100" onclick="window.location.href='#donate'">تبرع الآن</button>
+                    </div>
+                </div>
             </div>
             <div class="col-lg-4 col-md-6" style="padding-top:20px">
                 <div class="project-card animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
@@ -488,62 +498,61 @@
                 </div>
             </div>
         </div>
-<section class="donate" id="donate">
-     <div class="bank-details-container" style="direction: rtl; font-family: 'Tajawal', sans-serif;">
-         <div class="bank-details-card animate__animated animate__fadeIn p-4 rounded-4 shadow-lg" style="background: linear-gradient(135deg, #f9f9f9 0%, #e8f5e9 100%); border-right: 5px solid #9aaa8e; max-width: 600px; margin: 0 auto;margin-top:100px">
-            <h4 class="text-center mb-4 pb-2" style="color: #9aaa8e; border-bottom: 2px dashed #9aaa8e; font-weight: 700;">
-                <i class="fas fa-donate me-2"></i>حساب التبرعات البنكي
-            </h4>
+    <section class="donate" id="donate">
+         <div class="bank-details-container" style="direction: rtl; font-family: 'Tajawal', sans-serif;">
+             <div class="bank-details-card animate__animated animate__fadeIn p-4 rounded-4 shadow-lg" style="background: linear-gradient(135deg, #f9f9f9 0%, #e8f5e9 100%); border-right: 5px solid #9aaa8e; max-width: 600px; margin: 0 auto;margin-top:100px">
+                <h4 class="text-center mb-4 pb-2" style="color: #9aaa8e; border-bottom: 2px dashed #9aaa8e; font-weight: 700;">
+                    <i class="fas fa-donate me-2"></i>حساب التبرعات البنكي
+                </h4>
+                <div class="bank-details-grid">
+                  <div class="detail-item">
+                    <div class="detail-icon" style="background-color: #e8f5e9;">
+                      <i class="fas fa-university" style="color: #2e7d32;"></i>
+                    </div>
+                    <div class="detail-content">
+                      <strong>اسم البنك:</strong>
+                      <span>بنك الخرطوم</span>
+                    </div>
+                  </div>
 
-        <div class="bank-details-grid">
-          <div class="detail-item">
-            <div class="detail-icon" style="background-color: #e8f5e9;">
-              <i class="fas fa-university" style="color: #2e7d32;"></i>
-            </div>
-            <div class="detail-content">
-              <strong>اسم البنك:</strong>
-              <span>بنك الخرطوم</span>
-            </div>
-          </div>
+              <div class="detail-item">
+                <div class="detail-icon" style="background-color: #e3f2fd;">
+                  <i class="fas fa-user" style="color: #1565c0;"></i>
+                </div>
+                <div class="detail-content">
+                  <strong>اسم الحساب:</strong>
+                  <span>جمعية عطب الخيرية</span>
+                </div>
+              </div>
 
-          <div class="detail-item">
-            <div class="detail-icon" style="background-color: #e3f2fd;">
-              <i class="fas fa-user" style="color: #1565c0;"></i>
-            </div>
-            <div class="detail-content">
-              <strong>اسم الحساب:</strong>
-              <span>جمعية عطب الخيرية</span>
-            </div>
-          </div>
+              <div class="detail-item">
+                <div class="detail-icon" style="background-color: #fff8e1;">
+                  <i class="fas fa-hashtag" style="color: #ff8f00;"></i>
+                </div>
+                <div class="detail-content">
+                  <strong>رقم الحساب:</strong>
+                  <span style="font-family: monospace; font-size: 1.1em;">9135155</span>
+                </div>
+              </div>
 
-          <div class="detail-item">
-            <div class="detail-icon" style="background-color: #fff8e1;">
-              <i class="fas fa-hashtag" style="color: #ff8f00;"></i>
+              <div class="detail-item">
+                <div class="detail-icon" style="background-color: #ffebee;">
+                  <i class="fas fa-code-branch" style="color: #c62828;"></i>
+                </div>
+                <div class="detail-content">
+                  <strong>الفرع:</strong>
+                  <span>عبري</span>
+                </div>
+              </div>
             </div>
-            <div class="detail-content">
-              <strong>رقم الحساب:</strong>
-              <span style="font-family: monospace; font-size: 1.1em;">9135155</span>
-            </div>
-          </div>
 
-          <div class="detail-item">
-            <div class="detail-icon" style="background-color: #ffebee;">
-              <i class="fas fa-code-branch" style="color: #c62828;"></i>
+            <div class="text-center mt-4 pt-3" style="border-top: 1px solid #e0e0e0;">
+              <small style="color: #757575;">شكراً لدعمكم ومساهمتكم في أعمالنا الخيرية</small>
             </div>
-            <div class="detail-content">
-              <strong>الفرع:</strong>
-              <span>عبري</span>
-            </div>
-          </div>
         </div>
-
-        <div class="text-center mt-4 pt-3" style="border-top: 1px solid #e0e0e0;">
-          <small style="color: #757575;">شكراً لدعمكم ومساهمتكم في أعمالنا الخيرية</small>
         </div>
-    </div>
-    </div>
-    </section>
-    </div>
+        </section>
+        </div>
 
 </section>
 
@@ -581,21 +590,22 @@
                             <i class="fas fa-map-marker-alt"></i>
                             السودان - الولاية الشمالية - عبري
                         </p>
-                        <p class="animate-footer-item" style="transition-delay: 0.5s;">
-                            <i class="fas fa-phone-alt"></i>
-                            <span dir="ltr" style="display: inline-block;">+249 961 886 858</span>
-                        </p>
+                       <div class="animate-footer-item" style="transition-delay: 0.5s; font-size: 16px;">
+                              <i class="fas fa-phone-alt" style=" margin-right: 8px;"></i>
+                              <a href="tel:+249961886858" dir="ltr" style="color: inherit; text-decoration: none;">+249 961 886 858</a><br>
+                              <a href="tel:+249912390417" dir="ltr" style="color: inherit; text-decoration: none;margin-right:39px">+249 912 390 417</a>
+                        </div>
+                        <div class="animate-footer-item" style="transition-delay: 0.5s; font-size: 16px;">
+                              <i class="fab fa-whatsapp" style=" margin-right: 8px;"></i>
+                              <a href="https://wa.me/249961886858" dir="ltr" style="color: inherit; text-decoration: none;">+249 961 886 858</a><br>
+                              <a href="https://wa.me/249912390417" dir="ltr" style="color: inherit; text-decoration: none; margin-right:39px">+249 912 390 417</a>
+                        </div>
                         <p class="animate-footer-item" style="transition-delay: 0.5s;">
                             <a href="https://www.facebook.com/profile.php?id=61575207501856" class="animate__animated animate__pulse" style="color: inherit;">
                                 <i class="fab fa-facebook-f"></i> صفحة جمعية عطب
                             </a>
                         </p>
-                        <p class="animate-footer-item" style="transition-delay: 0.5s;">
-                            <a href="https://wa.me/249961886858" style="color: inherit; text-decoration: none;">
-                                <i class="fab fa-whatsapp"></i>
-                                <span dir="ltr" style="display: inline-block;">+249 961 886 858</span>
-                            </a>
-                        </p>
+
                         <p class="animate-footer-item" style="transition-delay: 0.6s;">
                             <i class="fas fa-envelope"></i>
                             info@atab-charity.org
